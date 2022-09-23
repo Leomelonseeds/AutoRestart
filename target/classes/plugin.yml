@@ -1,0 +1,21 @@
+name: AutoRestart
+main: com.leomelonseeds.autorestart.AutoRestart
+version: 1.1
+commands:
+  autorestart:
+    description: Restart with a timer.
+    aliases: [au]
+    permission: autorestart.restart
+permissions:
+  autorestart.*:
+     description: Gives access to all AutoRestart commands
+     children:
+       autorestart.restart: true
+       autorestart.reload: true
+  autorestart.restart:
+    description: Gives access to /autorestart
+    default: op
+  autorestart.reload: 
+    description: Gives access to /autorestart reload
+    default: op
+    
